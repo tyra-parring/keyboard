@@ -1,0 +1,131 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  
+  body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .keyboard {
+    background: #dea0a0;
+    padding: 45px 40px;
+    border-radius: 40px;
+    position: relative;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    width: 1120px;
+  }
+  
+  .key {
+    border: none;
+    border-radius: 12px;
+    color: #1df8de;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 65px;
+    padding: 18px 24px;
+    position: relative;
+    height: 4rem;
+  }
+  
+  .front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    color: #4dc7b9;
+    height: 4rem;
+    min-width: 65px;
+    margin: 0;
+    padding: 0px;
+    transform: translateY(-4px);
+    will-change: transform;
+    transition: transform 
+      600ms 
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    border-radius: 12px;
+    background: hsl(0, 0%, 0%);
+    background: transparent;
+    transform: translateY(2px);
+    padding: 0;
+  }
+  
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.15);
+    background: transparent;
+    padding: 0;
+  }
+  
+  .utility .front {
+    color: #747575;
+    flex: auto;
+  }
+  
+  .key:hover .front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .key:hover .shadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  
+  .key:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .key:active .shadow {
+    transform: translateY(1px);
+  }
+  
+  
